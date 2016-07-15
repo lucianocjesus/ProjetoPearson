@@ -11,6 +11,7 @@ namespace ProjetoTestePerson.Data
     {
         private readonly SqlConnection _objSqlConnection;
 
+
         public AssuntoData()
         {
             _objSqlConnection = new SqlConnection
