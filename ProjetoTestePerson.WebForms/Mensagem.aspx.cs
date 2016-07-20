@@ -12,7 +12,7 @@ namespace ProjetoTestePerson.WebForms
         {
             if (!IsPostBack)
             {
-
+                this.btnEnviarDados.Attributes.Add("OnClick", "return fCheck();");
                 /*
                  André, infelismente não consegui fazer nada na parte de front-end, porem toda a estrutura para back-end esta pronta:
                  * 
@@ -41,6 +41,21 @@ namespace ProjetoTestePerson.WebForms
             ddlAssuntos.DataValueField = "Id";
             ddlAssuntos.DataTextField = "Assunto";
             ddlAssuntos.DataBind();
+        }
+
+        protected void btnEnviarDados_Click(object sender, EventArgs e)
+        {
+            var mensagens = new Mensagens
+            {
+                Nome = txtNome.Text,
+                Email = txtEmail.Text,
+                Ddd = Convert.ToInt32(txtDDD.Text),
+                Telefone = Convert.ToInt32(txtTelefone.Text),
+                IdAssunto = Convert.ToInt32(ddlAssuntos.SelectedItem.Value),
+                Mensagem = txtMensagem.Text
+            };
+            var objMensagemBo = new MensagemBo();
+            objMensagemBo.GravaMensagemBo(mensagens);
         }
     }
 }

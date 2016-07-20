@@ -42,7 +42,7 @@ namespace ProjetoTestePerson.Data
                     cmd.Parameters.Add(new SqlParameter("@pDDD", mensagens.Ddd));
                     cmd.Parameters.Add(new SqlParameter("@pTelefone", mensagens.Telefone));
                     cmd.Parameters.Add(new SqlParameter("@pMensagem", mensagens.Mensagem));
-                    cmd.Parameters.Add(new SqlParameter("@pData", mensagens.Data));
+                    //cmd.Parameters.Add(new SqlParameter("@pData", mensagens.Data));
                     cmd.ExecuteNonQuery();
                     retorno = "Mensagem adicionada com sucesso.";
                 }

@@ -9,7 +9,40 @@
     <link href="Content/animate.css" rel="stylesheet" />
     <link href="Content/signin.css" rel="stylesheet" />
     <link href="Content/Site.css" rel="stylesheet" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <script type="text/javascript">
+        function fCheck() {
+            var msg = "";
+            if (document.getElementById('<%= txtNome.ID%>').value == '') {
+                msg = msg + '   * Nome\n';
+            }
 
+            if (document.getElementById('<%= txtEmail.ID%>').value == '') {
+                msg = msg + '   * E-mail\n';
+            }
+
+            if (document.getElementById('<%= txtDDD.ID%>').value == '') {
+                msg = msg + '   * DDD\n';
+            }
+
+            if (document.getElementById('<%= txtTelefone.ID%>').value == '') {
+                msg = msg + '   * Telefone\n';
+            }
+
+            if (document.getElementById('<%= ddlAssuntos.ID%>').value == 0) {
+                msg = msg + '   * Assunto\n';
+            }
+
+            if (document.getElementById('<%= txtMensagem.ID%>').value == '') {
+                msg = msg + '   * Mensagem\n';
+            }
+
+            if (msg != "") {
+                alert('Os seguintes campos são obrigatórios:\n\n' + msg);
+                return false;
+            }
+        }
+    </script>
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -48,7 +81,7 @@
                     </div>
 
                     <div class="form-group">
-                        <label>E-mail:</label>
+                        <label>Assunto:</label>
                         <asp:DropDownList class="form-control input-lg" ID="ddlAssuntos" runat="server"></asp:DropDownList>
                     </div>
 
@@ -57,7 +90,7 @@
                         <asp:TextBox class="form-control input-lg" ID="txtMensagem" TextMode="MultiLine" Rows="5" runat="server"></asp:TextBox>
                     </div>
 
-                    <asp:Button ID="btnEnviarDados" class="btn btn-danger" runat="server" Text="Enviar" />
+                    <asp:Button ID="btnEnviarDados" class="btn btn-danger" runat="server" Text="Enviar" OnClick="btnEnviarDados_Click" />
                 </form>
             </div>
             <div class="col-sm-2"></div>
