@@ -190,13 +190,13 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ProjetoTestePerson.Business\ProjetoTestePerson.Business.csproj">
+    <ProjectReference Include="..\ProjetoTestePerson.Business\ProjetoTestePearson.Business.csproj">
       <Project>{08096832-ac03-4373-8676-89757e6988f4}</Project>
-      <Name>ProjetoTestePerson.Business</Name>
+      <Name>ProjetoTestePearson.Business</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ProjetoTestePerson.Domain\ProjetoTestePerson.Domain.csproj">
+    <ProjectReference Include="..\ProjetoTestePerson.Domain\ProjetoTestePearson.Domain.csproj">
       <Project>{20b67921-54a1-411a-b189-517d431b1d6f}</Project>
-      <Name>ProjetoTestePerson.Domain</Name>
+      <Name>ProjetoTestePearson.Domain</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
