@@ -97,7 +97,9 @@
         </div>
     </div>
     <footer class="container text-center">
-        <p>&copy; @DateTime.Now.Year - Teste Pearson</p>
+        <p>
+            <asp:Label ID="lblRetorno" runat="server" Text="" />
+        </p>
     </footer>
 </body>
 </html>

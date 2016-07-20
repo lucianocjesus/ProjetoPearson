@@ -43,19 +43,39 @@ namespace ProjetoTestePerson.WebForms
             ddlAssuntos.DataBind();
         }
 
+        private void LimpaCampos()
+        {
+            txtNome.Text = "";
+            txtEmail.Text = "";
+            txtMensagem.Text = "";
+            txtDDD.Text = "";
+            txtTelefone.Text = "";
+            ddlAssuntos.SelectedIndex = 0;
+        }
+
         protected void btnEnviarDados_Click(object sender, EventArgs e)
         {
-            var mensagens = new Mensagens
+            try
             {
-                Nome = txtNome.Text,
-                Email = txtEmail.Text,
-                Ddd = Convert.ToInt32(txtDDD.Text),
-                Telefone = Convert.ToInt32(txtTelefone.Text),
-                IdAssunto = Convert.ToInt32(ddlAssuntos.SelectedItem.Value),
-                Mensagem = txtMensagem.Text
-            };
-            var objMensagemBo = new MensagemBo();
-            objMensagemBo.GravaMensagemBo(mensagens);
+                var mensagens = new Mensagens
+                {
+                    Nome = txtNome.Text,
+                    Email = txtEmail.Text,
+                    Ddd = Convert.ToInt32(txtDDD.Text),
+                    Telefone = Convert.ToInt32(txtTelefone.Text),
+                    IdAssunto = Convert.ToInt32(ddlAssuntos.SelectedItem.Value),
+                    Mensagem = txtMensagem.Text,
+                    Data = DateTime.Now
+                };
+                var objMensagemBo = new MensagemBo();
+                lblRetorno.Text = objMensagemBo.GravaMensagemBo(mensagens);
+                LimpaCampos();
+            }
+            catch (Exception ex)
+            {
+                lblRetorno.Text = ex.Message;
+            }
+            
         }
     }
 }
