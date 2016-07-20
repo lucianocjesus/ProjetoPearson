@@ -7,6 +7,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using System.Web.UI.HtmlControls;
+using System.Web.UI.WebControls;
+
 namespace ProjetoTestePerson.WebForms {
     
     
@@ -19,7 +22,7 @@ namespace ProjetoTestePerson.WebForms {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected HtmlForm form1;
         
         /// <summary>
         /// txtNome control.
@@ -28,7 +31,7 @@ namespace ProjetoTestePerson.WebForms {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNome;
+        protected TextBox txtNome;
         
         /// <summary>
         /// txtEmail control.
@@ -37,7 +40,7 @@ namespace ProjetoTestePerson.WebForms {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtEmail;
+        protected TextBox txtEmail;
         
         /// <summary>
         /// txtDDD control.
@@ -46,7 +49,7 @@ namespace ProjetoTestePerson.WebForms {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDDD;
+        protected TextBox txtDDD;
         
         /// <summary>
         /// txtTelefone control.
@@ -55,7 +58,7 @@ namespace ProjetoTestePerson.WebForms {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTelefone;
+        protected TextBox txtTelefone;
         
         /// <summary>
         /// ddlAssuntos control.
@@ -64,7 +67,7 @@ namespace ProjetoTestePerson.WebForms {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlAssuntos;
+        protected DropDownList ddlAssuntos;
         
         /// <summary>
         /// txtMensagem control.
@@ -73,7 +76,7 @@ namespace ProjetoTestePerson.WebForms {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtMensagem;
+        protected TextBox txtMensagem;
         
         /// <summary>
         /// btnEnviarDados control.
@@ -82,7 +85,7 @@ namespace ProjetoTestePerson.WebForms {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnEnviarDados;
+        protected Button btnEnviarDados;
         
         /// <summary>
         /// lblRetorno control.
@@ -91,6 +94,6 @@ namespace ProjetoTestePerson.WebForms {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblRetorno;
+        protected Label lblRetorno;
     }
 }
